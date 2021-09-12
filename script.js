@@ -75,3 +75,12 @@ function randomColor() {
   color3.style.background = '#' + (Math.random().toString(16) + "000000").substring(2,8);
 }
 randomColor()
+// alerta quando o input estiver sem numero;
+function attention() {
+  const input = document.getElementById('board-size');
+  
+  if (input.value === '') {
+    window.alert('Board inválido!');
+  }
+}
+document.getElementById('generate-board').addEventListener('click', attention)
