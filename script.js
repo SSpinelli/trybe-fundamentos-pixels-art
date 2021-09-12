@@ -17,9 +17,17 @@ function initialGrid(number) {
 initialGrid('5');
 // gerar o grid de acordo com o input do usuário;
 function modularGrid() {
-  const valor = document.getElementById('board-size').value;
+  let valor = document.getElementById('board-size').value;
+  if (valor >= 50) {
+    valor = 50;
+    console.log('entrei')
+  } else if (valor <= 5) {
+    console.log('to aqui')
+    valor = 5;
+  }
   const parentElement = document.querySelector('#pixel-board')
   const remove = document.querySelectorAll('.pixel');
+  // Thiago Ximenes - turma 16 - Tribo A, me ajudou com essa parte que remove o grid anterior.
   remove.forEach((element) => {
     element.remove();
   });
