@@ -25,7 +25,7 @@ body {
 
 #pixel-board {
   width: 237px;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-left: 630px;
 }
 
@@ -43,13 +43,21 @@ body {
 }
 
 #green {
-  background-color: #63a818;
+  background-color: green;
 }
 
 #purple {
-  background-color: #9518a8;
+  background-color: purple;
 }
 
 #orange {
-  background-color: #f5b73b;
+  background-color: orange;
+}
+
+#clear-board {
+  margin-left: 705px;
+  margin-top: 30px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 20px;
 }
