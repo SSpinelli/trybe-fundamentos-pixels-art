@@ -20,11 +20,9 @@ function modularGrid() {
   const valor = document.getElementById('board-size').value;
   const parentElement = document.querySelector('#pixel-board')
   const remove = document.querySelectorAll('.pixel');
-
   remove.forEach((element) => {
     element.remove();
   });
-
   for (let index = 0; index < valor; index += 1) {
     const row = document.createElement('div');
     row.className = 'row'
