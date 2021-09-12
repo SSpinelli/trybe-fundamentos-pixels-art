@@ -16,40 +16,41 @@ for (let index = 0; index < colors.length; index += 1) {
 // Coloca a clace de ativado para a div que foi selecionada pelo usuário;
 function activeColor(click) {
   const black = document.getElementById('black');
-  const green = document.getElementById('green');
-  const purple = document.getElementById('purple');
-  const orange = document.getElementById('orange');
+  const color1 = document.getElementById('color1');
+  const color2 = document.getElementById('color2');
+  const color3 = document.getElementById('color3');
 
-  if (click.target === purple) {
+  if (click.target === color2) {
     black.classList.remove('selected')
-    green.classList.remove('selected')
-    purple.classList.add('selected')
-    orange.classList.remove('selected')
+    color1.classList.remove('selected')
+    color2.classList.add('selected')
+    color3.classList.remove('selected')
     console.log('roxo selecionado')
-  } if (click.target === green) {
+  } if (click.target === color1) {
     black.classList.remove('selected')
-    green.classList.add('selected')
-    purple.classList.remove('selected')
-    orange.classList.remove('selected')
+    color1.classList.add('selected')
+    color2.classList.remove('selected')
+    color3.classList.remove('selected')
     console.log('verde selecionado')
-  } if (click.target === orange) {
+  } if (click.target === color3) {
     black.classList.remove('selected')
-    green.classList.remove('selected')
-    purple.classList.remove('selected')
-    orange.classList.add('selected')
+    color1.classList.remove('selected')
+    color2.classList.remove('selected')
+    color3.classList.add('selected')
     console.log('laranja selecionado')
   } if (click.target === black) {
     black.classList.add('selected')
-    green.classList.remove('selected')
-    purple.classList.remove('selected')
-    orange.classList.remove('selected')
+    color1.classList.remove('selected')
+    color2.classList.remove('selected')
+    color3.classList.remove('selected')
     console.log('preto selecionado')
   }
 }
 // Pinta um quadro do grid com a cor selecionada;
 function theBobRossShow(click) {
-  const selectedColor = document.getElementsByClassName('selected')[0].id
-  click.target.style.backgroundColor = selectedColor
+  const selectedColor = document.getElementsByClassName('selected')[0];
+  const style = window.getComputedStyle(selectedColor);
+  click.target.style.backgroundColor = style.getPropertyValue('background-color')
 }
 // Coloca o addEventListener em cada uma das 25 div's
 const pixel = document.getElementsByClassName('pixel');
@@ -64,3 +65,13 @@ function clearBoard() {
 }
 const button = document.querySelector('#clear-board');
 button.addEventListener('click', clearBoard)
+// fazer com que as cores da paleta sejam geradas automáticamente
+function randomColor() {
+  const color1 = document.getElementById('color1');
+  const color2 = document.getElementById('color2');
+  const color3 = document.getElementById('color3');
+  color1.style.background = '#' + (Math.random().toString(16) + "000000").substring(2,8);
+  color2.style.background = '#' + (Math.random().toString(16) + "000000").substring(2,8);
+  color3.style.background = '#' + (Math.random().toString(16) + "000000").substring(2,8);
+}
+randomColor()
