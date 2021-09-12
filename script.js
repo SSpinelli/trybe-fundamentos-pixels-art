@@ -1,19 +1,49 @@
-// Cria o grid;
-function createGrid(number) {
+// grid inicial de 5 por 5
+function initialGrid(number) {
   const parentElement = document.querySelector('#pixel-board')
+
   for (let index = 0; index < number; index += 1) {
-    const pixel = document.createElement('div');
-    pixel.className = 'pixel';
-    parentElement.appendChild(pixel);
+    const row = document.createElement('div');
+    row.className = 'row';
+    parentElement.appendChild(row);
+    for (let index2 = 0; index2 < number; index2 += 1) {
+      const squares = document.createElement('div');
+      squares.className = 'pixel';
+      row.appendChild(squares)
+      squares.addEventListener('click', theBobRossShow)
+    }  
   }
 }
-createGrid("25")
+initialGrid('5');
+// gerar o grid de acordo com o input do usuário;
+function modularGrid() {
+  const valor = document.getElementById('board-size').value;
+  const parentElement = document.querySelector('#pixel-board')
+  const remove = document.querySelectorAll('.pixel');
+
+  remove.forEach((element) => {
+    element.remove();
+  });
+
+  for (let index = 0; index < valor; index += 1) {
+    const row = document.createElement('div');
+    row.className = 'row'
+    parentElement.appendChild(row);
+    for (let index2 = 0; index2 < valor; index2 += 1) {
+      const squares = document.createElement('div');
+      squares.className = 'pixel';
+      row.appendChild(squares)
+      squares.addEventListener('click', theBobRossShow)
+    }  
+  }
+}
+document.getElementById('generate-board').addEventListener('click', modularGrid)
 // Coloca o addEventListener nas 4 cores da paleta;
 const colors = document.getElementsByClassName('color');
 for (let index = 0; index < colors.length; index += 1) {
   colors[index].addEventListener('click', activeColor) 
 }
-// Coloca a clace de ativado para a div que foi selecionada pelo usuário;
+// Coloca a classe de ativado para a div que foi selecionada pelo usuário;
 function activeColor(click) {
   const black = document.getElementById('black');
   const color1 = document.getElementById('color1');
@@ -52,12 +82,8 @@ function theBobRossShow(click) {
   const style = window.getComputedStyle(selectedColor);
   click.target.style.backgroundColor = style.getPropertyValue('background-color')
 }
-// Coloca o addEventListener em cada uma das 25 div's
-const pixel = document.getElementsByClassName('pixel');
-for (let index = 0; index < pixel.length; index += 1) {
-  pixel[index].addEventListener('click', theBobRossShow)
-}
 // Faz com que ao clicar no botão o quadro fique limpo;
+const pixel = document.getElementsByClassName('pixel');
 function clearBoard() {
   for (let index = 0; index < pixel.length; index += 1) {
     pixel[index].style.backgroundColor = 'white'
@@ -84,3 +110,7 @@ function attention() {
   }
 }
 document.getElementById('generate-board').addEventListener('click', attention)
+
+
+
+
