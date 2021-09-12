@@ -19,7 +19,7 @@ body {
   display: 0;
   width: 40px;
   height: 40px;
-  border: 1px solid #000;
+  border: 1px solid black;
   margin-left: 50px;
 }
 
@@ -36,4 +36,20 @@ body {
   display: inline-block;
   margin-left: 5px;
   background-color: white;
+}
+
+#black {
+  background-color: #000;
+}
+
+#green {
+  background-color: #63a818;
+}
+
+#purple {
+  background-color: #9518a8;
+}
+
+#orange {
+  background-color: #f5b73b;
 }
