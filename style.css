@@ -1,0 +1,39 @@
+body {
+  margin: 0 auto;
+}
+
+#title {
+  text-align: center;
+  font-family: monospace;
+  font-size: 65px;
+  color: #7c0e8f;
+}
+
+#color-palette {
+  width: 50%;
+  margin-left: 540px;
+  display: flex;
+}
+
+.color {
+  display: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  margin-left: 50px;
+}
+
+#pixel-board {
+  width: 237px;
+  margin-top: 40px;
+  margin-left: 630px;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: solid black 1px;
+  display: inline-block;
+  margin-left: 5px;
+  background-color: white;
+}
