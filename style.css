@@ -1,31 +1,50 @@
 body {
-  margin: 0 auto;
+  background: linear-gradient(#35aefc80, #4050f780), url(wallPapers.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+}
+
+section {
+  display: block;
+  text-align: center;
 }
 
 #title {
+  margin-top: 30px;
   text-align: center;
   font-family: monospace;
-  font-size: 65px;
-  color: #7c0e8f;
+  font-size: 400%;
+  padding: 20px;
+  color: black;
 }
 
 #color-palette {
-  width: 50%;
-  margin-left: 540px;
-  display: flex;
+  display: block;
+  text-align: center;
+  margin-top: -35px;
+  padding-top: 30px;
 }
 
 .color {
-  display: 0;
-  width: 40px;
-  height: 40px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
   border: 1px solid black;
-  margin-left: 50px;
+  margin-left: 1%;
 }
 
 #pixel-board {
+  background-image: url('canvas.png');
+  background-repeat: no-repeat;
+  background-size: 35.9%;
+  background-position: center;
   margin-top: 30px;
-  margin-left: 630px;
+  padding-top: 100px;
+  padding-bottom: 400px;
+  display: block;
+  text-align: center;
 }
 
 .pixel {
@@ -33,31 +52,60 @@ body {
   height: 40px;
   border: solid black 1px;
   display: inline-block;
-  margin-left: 5px;
   background-color: white;
+  margin-top: -5px;
 }
 
 #black {
   background-color: black;
 }
 
+#clear {
+  margin-top: -30px;
+  padding: 30px;
+}
+
 #clear-board {
-  margin-left: 705px;
-  margin-top: 30px;
   font-family: monospace;
   font-weight: 900;
   font-size: 20px;
 }
 
 #generator {
-  margin-left: 685px;
-  margin-top: 30px;
+  margin-top: -1px;
+  padding: 30px;
 }
 
 #board-size {
   font-size: 20px;
+  width: 250px;
 }
 
 #generate-board {
   font-size: 20px;
+}
+
+.selected {
+  border: 5px solid chartreuse;
+}
+
+#bob {
+  display: block;
+  text-align: right;
+  margin-right: -9px;
+  margin-top: -550px;
+}
+
+#bob img {
+  display: inline-block;
+  position: sticky;
+}
+
+#easterEgg {
+  color: black;
+  font-family: monospace;
+  margin-top: -730px;
+  font-size: 50px;
+  text-align: center;
+  padding: 10px;
 }
