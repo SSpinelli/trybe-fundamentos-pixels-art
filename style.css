@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: linear-gradient(#fb743e80, #383e5680), url(wallPapers.jpg);
+  background: linear-gradient(#fb743e80, #383e5680), url('wallPapers.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -18,7 +18,7 @@ footer {
   font-family: monospace;
   text-align: center;
   font-size: 30px;
-  text-shadow: 3px 5px 1px #000000;
+  text-shadow: 3px 5px 1px black;
 }
 
 input {
@@ -46,7 +46,7 @@ button:hover {
   font-size: 400%;
   padding: 20px;
   color: #fb743e;
-  text-shadow: 3px 5px 1px #000000;
+  text-shadow: 3px 5px 1px black;
 }
 
 #color-palette {
@@ -125,7 +125,7 @@ button:hover {
 
 #easterEgg {
   color: #fb743e;
-  text-shadow: 3px 5px 1px #000000;
+  text-shadow: 3px 5px 1px black;
   font-family: monospace;
   font-size: 50px;
   text-align: center;
